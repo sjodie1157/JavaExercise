@@ -1,9 +1,6 @@
-let hoursWorked = prompt ("enter your hours")
-console.log(`work hours was ${hoursWorked} hours`);
+let hoursWorked = +prompt ("enter your hours worked:")
+let workRate = +prompt ("Work rate:")
+let salary = hoursWorked * workRate
+let curFormat = Intl.NumberFormat()
 
-
-let workRate = prompt ("Work rate")
-console.log(`Rate per day ${workRate}`);
-
-hoursWorked *= workRate
-console.log(`R ${hoursWorked}`);
+console.log(`your salary is R${curFormat.format(salary)}`);
